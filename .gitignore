@@ -1,0 +1,22 @@
+﻿# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Node.js build files
+node_modules/
+dist/
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Regenerable source datasets (keep Exasol-ready copies in Git)
+data/sample_synthetic_data/
+data/sample_synthetic_data_lf/

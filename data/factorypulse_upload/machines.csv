@@ -1,0 +1,25 @@
+MACHINE_ID,PLANT,MACHINE_TYPE,CRITICALITY
+M-001,Plant A,Conveyor,Medium
+M-002,Plant B,Pump,Medium
+M-003,Plant C,Compressor,High
+M-004,Plant A,Press,Critical
+M-005,Plant B,Conveyor,Medium
+M-006,Plant C,Pump,High
+M-007,Plant A,Compressor,Medium
+M-008,Plant B,Press,Medium
+M-009,Plant C,Conveyor,Critical
+M-010,Plant A,Pump,Medium
+M-011,Plant B,Compressor,Medium
+M-012,Plant C,Press,High
+M-013,Plant A,Conveyor,Critical
+M-014,Plant B,Pump,Medium
+M-015,Plant C,Compressor,High
+M-016,Plant A,Press,Medium
+M-017,Plant B,Conveyor,Medium
+M-018,Plant C,Pump,High
+M-019,Plant A,Compressor,Medium
+M-020,Plant B,Press,Medium
+M-021,Plant C,Conveyor,Critical
+M-022,Plant A,Pump,Medium
+M-023,Plant B,Compressor,Medium
+M-024,Plant C,Press,High

@@ -1,0 +1,29 @@
+-- FactoryPulse AI
+-- Analytics 1: Downtime and failure count per machine
+-- Data source: FACTORYPULSE.MACHINES and FACTORYPULSE.DOWNTIME_EVENTS
+-- All data is synthetic and intended for demonstration.
+
+SELECT
+    M.MACHINE_ID,
+    M.PLANT,
+    M.MACHINE_TYPE,
+    M.CRITICALITY,
+    COUNT(D.EVENT_ID) AS FAILURE_COUNT,
+    ROUND(
+        COALESCE(
+            SUM(SECONDS_BETWEEN(D.END_TIME, D.START_TIME)) / 3600.0,
+            0
+        ),
+        2
+    ) AS DOWNTIME_HOURS
+FROM FACTORYPULSE.MACHINES M
+LEFT JOIN FACTORYPULSE.DOWNTIME_EVENTS D
+    ON M.MACHINE_ID = D.MACHINE_ID
+GROUP BY
+    M.MACHINE_ID,
+    M.PLANT,
+    M.MACHINE_TYPE,
+    M.CRITICALITY
+ORDER BY
+    DOWNTIME_HOURS DESC,
+    FAILURE_COUNT DESC;
